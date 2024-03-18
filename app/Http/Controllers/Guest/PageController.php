@@ -11,6 +11,6 @@ class PageController extends Controller
     public function index()
     {
         $comics = Comic::All();
-        return view('welcome', compact('comics'));
+        return view('welcome', compact('comicsData'));
     }
 }
