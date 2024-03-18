@@ -4,7 +4,8 @@
 
 @section('main-content')
 
-{{-- <div class="container">
+
+<div class="container">
     <h1 class="text-center text-dark">WELCOME TO COMICS</h1>
     <div class="row">
         @foreach ( $comics as $comic)
@@ -18,5 +19,5 @@
           </div>
         @endforeach
     </div>
-</div> --}}
+</div>
 @endsection

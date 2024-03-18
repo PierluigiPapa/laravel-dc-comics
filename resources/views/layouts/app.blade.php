@@ -10,8 +10,6 @@
 
 </head>
 <body>
-    <h1 class="text-center">HOLA! TUTORS!</h1>
-
     @yield('main')
 </body>
 </html>

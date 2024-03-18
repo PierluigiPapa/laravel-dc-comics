@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\backend\ComicController;
+use App\Http\Controllers\backend\Controller;
 use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
