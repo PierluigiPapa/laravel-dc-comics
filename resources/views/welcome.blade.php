@@ -1,9 +1,5 @@
-@extends('layouts.app');
+@section('page-title', 'Home')
 
-@section('title', 'LARAVEL-DC-COMICS | Home')
+@section('main.content')
 
-@section('main')
-    <main>
-
-    </main>
 @endsection
