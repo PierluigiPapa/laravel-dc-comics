@@ -11,11 +11,11 @@
         <div class="card g-3 me-4 bg-primary border-dark" style="width: 18rem;">
             <div class="card-body">
                 <figure>
-                    {{-- <img src="{{$element['thumb']}}"> --}}
+                    <img src="{{$element->thumb}}" alt={{$element->thumb}}>
                 </figure>
-              <h4 class="card-title text-center text-white">{{$element['title']}}</h5>
-              <p class="card-text text-center text-white">Descrizione: {{$element['description']}}</p>
-              <p class="card-text text-center text-white">Comic Price: {{$element['price']}}</p>
+              <h4 class="card-title text-center text-white">{{$element->title}}</h4>
+              <p class="card-text text-center text-white">Descrizione: {{$element->description}}</p>
+              <p class="card-text text-center text-white">Comic Price: {{$element->thumb}}</p>
             </div>
           </div>
         @endforeach
