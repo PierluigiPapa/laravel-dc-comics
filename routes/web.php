@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\backend\PastaController;
+use App\Http\Controllers\backend\ComicController;
 use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,4 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'index'])->name('homePage');
 
-Route::resource('pastas', ComicController::class );
+Route::resource('comics', ComicController::class );
