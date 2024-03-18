@@ -2,7 +2,7 @@
 
 <header style="text-align: center;">
     <a href="{{ route('comicsData.index') }}" class="btn btn-primary fw-bolder text-center">
-        ACCEDI A DC-COMICS!
+        VISUALIZZA FUMETTI!
     </a>
 </header>
 
