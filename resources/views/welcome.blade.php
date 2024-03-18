@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LARAVEL-DC-COMICS</title>
+@extends('layouts.app');
 
-    <head>
-        @vite('resources/js/app.js')
-    </head>
+@section('title', 'LARAVEL-DC-COMICS | Home')
 
-</head>
-<body>
+@section('main')
+    <main>
 
-<h1 class="text-center">HOLA! TUTORS!</h1>
-
-</body>
-</html>
+    </main>
+@endsection
