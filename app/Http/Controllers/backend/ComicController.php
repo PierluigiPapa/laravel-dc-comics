@@ -22,16 +22,26 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
+
     {
-        //
+        $addComic = $request->all();
+
+        $newComic = new Comic();
+
+        $newComic->fill($addComic);
+
+        $newComic->save();
+
+        return redirect()->route('comicsData.show', ['comicsDatum' => $newComic->id]);
     }
+
 
     /**
      * Display the specified resource.

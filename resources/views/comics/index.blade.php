@@ -6,6 +6,9 @@
 
 <div class="container">
     <h1 class="text-center text-dark py-2">DC COMICS</h1>
+
+    <a href="{{route('comicsData.create')}}">AGGIUNGI UN NUOVO COMIC</a>
+
     <div class="row">
         @foreach ($comicsData as $element)
         <div class="card g-3 me-4 bg-primary border-dark" style="width: 18rem;">
