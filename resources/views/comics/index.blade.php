@@ -9,7 +9,7 @@
 
     <div class="row justify-content-center">
         <div class="col-md-6 text-center">
-            <a href="{{route('comicsData.create')}}" class="fw-bold fs-5 text-decoration-none btn btn-primary">AGGIUNGI UN NUOVO COMIC</a>
+            <a href="{{route('comicsData.create')}}" class="fw-bold fs-5 text-decoration-none btn btn-primary border border-dark">AGGIUNGI UN NUOVO COMIC</a>
         </div>
     </div>
 
@@ -23,12 +23,15 @@
                 <p class="card-text text-center text-white">Comic Series: {{ $element['series'] }}</p>
                 <p class="card-text text-center text-white">Sale Date: {{ $element['sale_date'] }}</p>
             </div>
-            <form action="{{route('comicsData.destroy', $element->id)}}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn btn-danger text-center">DELETE</button>
-            </form>
-            <a href="{{route('comicsData.edit', $element->id)}}" class="btn btn-success text-center w-50">MODIFICA</a>
+
+            <div class="d-flex justify-content-around w-100 p-3">
+                <form action="{{route('comicsData.destroy', $element->id)}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger text-center fw-bold border border-dark">DELETE</button>
+                </form>
+                <a href="{{route('comicsData.edit', $element->id)}}" class="btn btn-success text-center fw-bold border border-dark">MODIFICA</a>
+            </div>
         </div>
         @endforeach
     </div>
