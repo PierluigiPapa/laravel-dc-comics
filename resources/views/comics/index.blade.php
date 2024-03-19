@@ -7,7 +7,11 @@
 <div class="container">
     <h1 class="text-center text-dark py-2">DC COMICS</h1>
 
-    <a href="{{route('comicsData.create')}}">AGGIUNGI UN NUOVO COMIC</a>
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <a href="{{route('comicsData.create')}}"  class="fw-bold fs-5 text-decoration-none btn btn-primary">AGGIUNGI UN NUOVO COMIC</a>
+        </div>
+    </div>
 
     <div class="row">
         @foreach ($comicsData as $element)
@@ -15,11 +19,15 @@
             <div class="card-body d-flex flex-column align-items-center justify-content-center">
                 <img src="{{$element['thumb']}}" class="img-fluid mb-3" style="max-width: 50%; max-height: 50%;" alt="DC_Comics_image">
                 <a href="{{ route('comicsData.show', ['comicsDatum' => $element['id']])}}" class="text-decoration-none text-center text-white fw-bold py-3 fs-5">{{ $element['title']}}</a>
-                {{-- <h4 class="card-title text-center text-white">{{ $element['title'] }}</h4> --}}
                 <p class="card-text text-center text-white">Comic Price: $ {{ $element['price'] }}</p>
                 <p class="card-text text-center text-white">Comic Series: {{ $element['series'] }}</p>
                 <p class="card-text text-center text-white">Sale Date: {{ $element['sale_date'] }}</p>
             </div>
+            <form action="{{route('comicsData.destroy', $element->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger text-center">DELETE</button>
+            </form>
         </div>
         @endforeach
     </div>
