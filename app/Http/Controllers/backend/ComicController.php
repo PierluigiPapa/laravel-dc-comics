@@ -92,6 +92,28 @@ class ComicController extends Controller
      */
     public function update(Request $request, string $id)
     {
+
+        $validatedData = $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'required',
+            'thumb' => 'required',
+            'price' => 'required|numeric|min:0',
+            'series' => 'required',
+            'sale_date' => 'required|date',
+            'type' => 'required',
+        ], [
+            'title.required' => 'Il titolo è obbligatorio.',
+            'description.required' => 'La descrizione è obbligatoria.',
+            'thumb.required' => "L'immagine è obbligatoria.",
+            'price.required' => 'Il prezzo è obbligatorio.',
+            'price.numeric' => 'Il prezzo deve essere un numero.',
+            'price.min' => 'Il prezzo deve essere maggiore o uguale a :min.',
+            'series.required' => 'La serie è obbligatoria.',
+            'sale_date.required' => 'La data di produzione è obbligatoria.',
+            'sale_date.date' => 'La data di produzione non è valida.',
+            'type.required' => 'La tipologia è obbligatoria.',
+        ]);
+
         $fumettoAggiornato = $request->all();
 
         $comic = Comic::find($id);

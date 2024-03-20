@@ -28,7 +28,7 @@
                 <form action="{{route('comicsData.destroy', $element->id)}}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger text-center fw-bold border border-dark">DELETE</button>
+                    <button type="submit" class="btn btn-danger text-center fw-bold border border-dark">CANCELLA</button>
                 </form>
                 <a href="{{route('comicsData.edit', $element->id)}}" class="btn btn-success text-center fw-bold border border-dark">MODIFICA</a>
             </div>
